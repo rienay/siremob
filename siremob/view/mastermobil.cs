@@ -36,14 +36,13 @@ namespace siremob.view
                 dataGridView_Mobil.AutoGenerateColumns = false;
 
                 dataGridView_Mobil.Columns["colIdMobil"].DataPropertyName = "id_mobil";
-                dataGridView_Mobil.Columns["colPlatNomor"].DataPropertyName = "plat_nomor";
+                dataGridView_Mobil.Columns["colPlatNomor"].DataPropertyName = "platnomor";
                 dataGridView_Mobil.Columns["colMerk"].DataPropertyName = "merk";
                 dataGridView_Mobil.Columns["colTipe"].DataPropertyName = "tipe";
                 dataGridView_Mobil.Columns["colTahun"].DataPropertyName = "tahun";
                 dataGridView_Mobil.Columns["colWarna"].DataPropertyName = "warna";
-                dataGridView_Mobil.Columns["colHarga"].DataPropertyName = "harga"; 
-                dataGridView_Mobil.Columns["colStatus"].DataPropertyName = "status";
-                dataGridView_Mobil.Columns["colFoto"].DataPropertyName = "foto";
+                dataGridView_Mobil.Columns["colHarga"].DataPropertyName = "hargasewaperhari"; 
+                dataGridView_Mobil.Columns["colStatus"].DataPropertyName = "statusmobil";
 
                 DataTable dt = _service.TampilData();
                 dataGridView_Mobil.DataSource = dt;
@@ -224,16 +223,16 @@ namespace siremob.view
                 if (e.RowIndex >= 0)
                 {
                     DataGridViewRow row = dataGridView_Mobil.Rows[e.RowIndex];
-                    textBox_IdMobil.Text = row.Cells[0].Value.ToString();
-                    textBox_PlatNomor.Text = row.Cells[1].Value.ToString();
-                    textBox_Merk.Text = row.Cells[2].Value.ToString();
-                    textBox_Tipe.Text = row.Cells[3].Value.ToString();
-                    numericUpDown_Tahun.Value = Convert.ToInt32(row.Cells[4].Value);
-                    textBox_Warna.Text = row.Cells[5].Value.ToString();
-                    textBox_Harga.Text = row.Cells[6].Value.ToString();
-                    comboBox_Status.Text = row.Cells[7].Value.ToString();
+                    textBox_IdMobil.Text = row.Cells["colIdMobil"].Value?.ToString();
+                    textBox_PlatNomor.Text = row.Cells["colPlatNomor"].Value?.ToString();
+                    textBox_Merk.Text = row.Cells["colMerk"].Value?.ToString();
+                    textBox_Tipe.Text = row.Cells["colTipe"].Value?.ToString();
+                    numericUpDown_Tahun.Value = Convert.ToInt32(row.Cells["colTahun"].Value);
+                    textBox_Warna.Text = row.Cells["colWarna"].Value?.ToString();
+                    textBox_Harga.Text = row.Cells["colHarga"].Value?.ToString();
+                    comboBox_Status.Text = row.Cells["colStatus"].Value?.ToString();
 
-                    string fotoPath = row.Cells[8].Value.ToString();
+                    string fotoPath = row.Cells["colFoto"].Value?.ToString() ?? "";
                     textBox_Foto.Text = fotoPath;
 
                     if (!string.IsNullOrEmpty(fotoPath) && File.Exists(fotoPath))
@@ -264,6 +263,8 @@ namespace siremob.view
                 }
                 else
                 {
+                    dataGridView_Mobil.AutoGenerateColumns = false;
+
                     DataTable dt = _service.CariData(textBox_Cari.Text);
                     dataGridView_Mobil.DataSource = dt;
                 }
@@ -275,6 +276,11 @@ namespace siremob.view
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox_Foto_Click(object sender, EventArgs e)
         {
 
         }
