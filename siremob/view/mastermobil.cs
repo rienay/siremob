@@ -33,17 +33,20 @@ namespace siremob.view
         {
             try
             {
+                dataGridView_Mobil.AutoGenerateColumns = false;
+
+                dataGridView_Mobil.Columns["colIdMobil"].DataPropertyName = "id_mobil";
+                dataGridView_Mobil.Columns["colPlatNomor"].DataPropertyName = "plat_nomor";
+                dataGridView_Mobil.Columns["colMerk"].DataPropertyName = "merk";
+                dataGridView_Mobil.Columns["colTipe"].DataPropertyName = "tipe";
+                dataGridView_Mobil.Columns["colTahun"].DataPropertyName = "tahun";
+                dataGridView_Mobil.Columns["colWarna"].DataPropertyName = "warna";
+                dataGridView_Mobil.Columns["colHarga"].DataPropertyName = "harga"; 
+                dataGridView_Mobil.Columns["colStatus"].DataPropertyName = "status";
+                dataGridView_Mobil.Columns["colFoto"].DataPropertyName = "foto";
+
                 DataTable dt = _service.TampilData();
                 dataGridView_Mobil.DataSource = dt;
-                dataGridView_Mobil.Columns[0].HeaderText = "ID Mobil";
-                dataGridView_Mobil.Columns[1].HeaderText = "Plat Nomor";
-                dataGridView_Mobil.Columns[2].HeaderText = "Merk";
-                dataGridView_Mobil.Columns[3].HeaderText = "Tipe";
-                dataGridView_Mobil.Columns[4].HeaderText = "Tahun";
-                dataGridView_Mobil.Columns[5].HeaderText = "Warna";
-                dataGridView_Mobil.Columns[6].HeaderText = "Harga/Hari";
-                dataGridView_Mobil.Columns[7].HeaderText = "Status";
-                dataGridView_Mobil.Columns[8].HeaderText = "Foto";
             }
             catch (Exception ex)
             {
@@ -194,18 +197,23 @@ namespace siremob.view
             {
                 OpenFileDialog ofd = new OpenFileDialog();
                 ofd.Filter = "Image Files (*.jpg; *.jpeg; *.png; *.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
-                ofd.Title = "Pilih Foto Mobil";
 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     _fotoPath = ofd.FileName;
-                    textBox_Foto.Text = Path.GetFileName(ofd.FileName);
-                    pictureBox_Foto.Image = Image.FromFile(ofd.FileName);
+                    MessageBox.Show("Path: " + _fotoPath);
+                    textBox_Foto.Text = _fotoPath;
+                    pictureBox_Foto.Image = Image.FromFile(_fotoPath);
+
+                    MessageBox.Show(
+                        pictureBox_Foto.Image == null
+                        ? "Image NULL"
+                        : "Image BERHASIL DIMUAT");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Gagal Memilih Foto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.ToString());
             }
         }
 

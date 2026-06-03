@@ -25,8 +25,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_PlatNomor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.button_Batal = new System.Windows.Forms.Button();
             this.textBox_Merk = new System.Windows.Forms.TextBox();
+            this.button_Hapus = new System.Windows.Forms.Button();
+            this.button_Ubah = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.button_Tambah = new System.Windows.Forms.Button();
             this.textBox_Tipe = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDown_Tahun = new System.Windows.Forms.NumericUpDown();
@@ -39,20 +43,25 @@
             this.label10 = new System.Windows.Forms.Label();
             this.textBox_Foto = new System.Windows.Forms.TextBox();
             this.button_Browse = new System.Windows.Forms.Button();
-            this.button_Tambah = new System.Windows.Forms.Button();
-            this.button_Ubah = new System.Windows.Forms.Button();
-            this.button_Hapus = new System.Windows.Forms.Button();
-            this.button_Batal = new System.Windows.Forms.Button();
+            this.pictureBox_Foto = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox_Cari = new System.Windows.Forms.TextBox();
             this.button_Cari = new System.Windows.Forms.Button();
             this.dataGridView_Mobil = new System.Windows.Forms.DataGridView();
-            this.pictureBox_Foto = new System.Windows.Forms.PictureBox();
+            this.colIdMobil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPlatNomor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMerk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTipe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTahun = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colWarna = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colHarga = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFoto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Tahun)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Mobil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Mobil)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,7 +71,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1602, 80);
+            this.panel1.Size = new System.Drawing.Size(1319, 80);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -103,10 +112,11 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.textBox_Foto);
             this.panel2.Controls.Add(this.button_Browse);
+            this.panel2.Controls.Add(this.pictureBox_Foto);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 80);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(350, 724);
+            this.panel2.Size = new System.Drawing.Size(350, 726);
             this.panel2.TabIndex = 1;
             // 
             // label2
@@ -159,6 +169,19 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Merk";
             // 
+            // button_Batal
+            // 
+            this.button_Batal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
+            this.button_Batal.Font = new System.Drawing.Font("Arial", 10F);
+            this.button_Batal.ForeColor = System.Drawing.Color.White;
+            this.button_Batal.Location = new System.Drawing.Point(267, 658);
+            this.button_Batal.Name = "button_Batal";
+            this.button_Batal.Size = new System.Drawing.Size(66, 40);
+            this.button_Batal.TabIndex = 22;
+            this.button_Batal.Text = "Batal";
+            this.button_Batal.UseVisualStyleBackColor = false;
+            this.button_Batal.Click += new System.EventHandler(this.button_Batal_Click);
+            // 
             // textBox_Merk
             // 
             this.textBox_Merk.Font = new System.Drawing.Font("Arial", 10F);
@@ -166,6 +189,32 @@
             this.textBox_Merk.Name = "textBox_Merk";
             this.textBox_Merk.Size = new System.Drawing.Size(315, 27);
             this.textBox_Merk.TabIndex = 5;
+            // 
+            // button_Hapus
+            // 
+            this.button_Hapus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
+            this.button_Hapus.Font = new System.Drawing.Font("Arial", 10F);
+            this.button_Hapus.ForeColor = System.Drawing.Color.White;
+            this.button_Hapus.Location = new System.Drawing.Point(184, 658);
+            this.button_Hapus.Name = "button_Hapus";
+            this.button_Hapus.Size = new System.Drawing.Size(75, 40);
+            this.button_Hapus.TabIndex = 21;
+            this.button_Hapus.Text = "Hapus";
+            this.button_Hapus.UseVisualStyleBackColor = false;
+            this.button_Hapus.Click += new System.EventHandler(this.button_Hapus_Click);
+            // 
+            // button_Ubah
+            // 
+            this.button_Ubah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
+            this.button_Ubah.Font = new System.Drawing.Font("Arial", 10F);
+            this.button_Ubah.ForeColor = System.Drawing.Color.White;
+            this.button_Ubah.Location = new System.Drawing.Point(101, 658);
+            this.button_Ubah.Name = "button_Ubah";
+            this.button_Ubah.Size = new System.Drawing.Size(75, 40);
+            this.button_Ubah.TabIndex = 20;
+            this.button_Ubah.Text = "Ubah";
+            this.button_Ubah.UseVisualStyleBackColor = false;
+            this.button_Ubah.Click += new System.EventHandler(this.button_Ubah_Click);
             // 
             // label5
             // 
@@ -177,6 +226,19 @@
             this.label5.Size = new System.Drawing.Size(39, 19);
             this.label5.TabIndex = 6;
             this.label5.Text = "Tipe";
+            // 
+            // button_Tambah
+            // 
+            this.button_Tambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
+            this.button_Tambah.Font = new System.Drawing.Font("Arial", 10F);
+            this.button_Tambah.ForeColor = System.Drawing.Color.White;
+            this.button_Tambah.Location = new System.Drawing.Point(18, 658);
+            this.button_Tambah.Name = "button_Tambah";
+            this.button_Tambah.Size = new System.Drawing.Size(75, 40);
+            this.button_Tambah.TabIndex = 19;
+            this.button_Tambah.Text = "Tambah";
+            this.button_Tambah.UseVisualStyleBackColor = false;
+            this.button_Tambah.Click += new System.EventHandler(this.button_Tambah_Click);
             // 
             // textBox_Tipe
             // 
@@ -215,7 +277,7 @@
             this.numericUpDown_Tahun.Size = new System.Drawing.Size(315, 27);
             this.numericUpDown_Tahun.TabIndex = 9;
             this.numericUpDown_Tahun.Value = new decimal(new int[] {
-            2024,
+            2020,
             0,
             0,
             0});
@@ -316,57 +378,16 @@
             this.button_Browse.UseVisualStyleBackColor = false;
             this.button_Browse.Click += new System.EventHandler(this.button_Browse_Click);
             // 
-            // button_Tambah
+            // pictureBox_Foto
             // 
-            this.button_Tambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
-            this.button_Tambah.Font = new System.Drawing.Font("Arial", 10F);
-            this.button_Tambah.ForeColor = System.Drawing.Color.White;
-            this.button_Tambah.Location = new System.Drawing.Point(18, 658);
-            this.button_Tambah.Name = "button_Tambah";
-            this.button_Tambah.Size = new System.Drawing.Size(75, 40);
-            this.button_Tambah.TabIndex = 19;
-            this.button_Tambah.Text = "Tambah";
-            this.button_Tambah.UseVisualStyleBackColor = false;
-            this.button_Tambah.Click += new System.EventHandler(this.button_Tambah_Click);
-            // 
-            // button_Ubah
-            // 
-            this.button_Ubah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
-            this.button_Ubah.Font = new System.Drawing.Font("Arial", 10F);
-            this.button_Ubah.ForeColor = System.Drawing.Color.White;
-            this.button_Ubah.Location = new System.Drawing.Point(101, 658);
-            this.button_Ubah.Name = "button_Ubah";
-            this.button_Ubah.Size = new System.Drawing.Size(75, 40);
-            this.button_Ubah.TabIndex = 20;
-            this.button_Ubah.Text = "Ubah";
-            this.button_Ubah.UseVisualStyleBackColor = false;
-            this.button_Ubah.Click += new System.EventHandler(this.button_Ubah_Click);
-            // 
-            // button_Hapus
-            // 
-            this.button_Hapus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
-            this.button_Hapus.Font = new System.Drawing.Font("Arial", 10F);
-            this.button_Hapus.ForeColor = System.Drawing.Color.White;
-            this.button_Hapus.Location = new System.Drawing.Point(184, 658);
-            this.button_Hapus.Name = "button_Hapus";
-            this.button_Hapus.Size = new System.Drawing.Size(75, 40);
-            this.button_Hapus.TabIndex = 21;
-            this.button_Hapus.Text = "Hapus";
-            this.button_Hapus.UseVisualStyleBackColor = false;
-            this.button_Hapus.Click += new System.EventHandler(this.button_Hapus_Click);
-            // 
-            // button_Batal
-            // 
-            this.button_Batal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
-            this.button_Batal.Font = new System.Drawing.Font("Arial", 10F);
-            this.button_Batal.ForeColor = System.Drawing.Color.White;
-            this.button_Batal.Location = new System.Drawing.Point(267, 658);
-            this.button_Batal.Name = "button_Batal";
-            this.button_Batal.Size = new System.Drawing.Size(66, 40);
-            this.button_Batal.TabIndex = 22;
-            this.button_Batal.Text = "Batal";
-            this.button_Batal.UseVisualStyleBackColor = false;
-            this.button_Batal.Click += new System.EventHandler(this.button_Batal_Click);
+            this.pictureBox_Foto.BackColor = System.Drawing.Color.White;
+            this.pictureBox_Foto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_Foto.Location = new System.Drawing.Point(13, 456);
+            this.pictureBox_Foto.Name = "pictureBox_Foto";
+            this.pictureBox_Foto.Size = new System.Drawing.Size(315, 180);
+            this.pictureBox_Foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_Foto.TabIndex = 27;
+            this.pictureBox_Foto.TabStop = false;
             // 
             // label11
             // 
@@ -405,32 +426,102 @@
             this.dataGridView_Mobil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView_Mobil.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_Mobil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Mobil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colIdMobil,
+            this.colPlatNomor,
+            this.colMerk,
+            this.colTipe,
+            this.colTahun,
+            this.colWarna,
+            this.colHarga,
+            this.colStatus,
+            this.colFoto});
             this.dataGridView_Mobil.Location = new System.Drawing.Point(374, 157);
             this.dataGridView_Mobil.Name = "dataGridView_Mobil";
             this.dataGridView_Mobil.ReadOnly = true;
             this.dataGridView_Mobil.RowHeadersWidth = 51;
-            this.dataGridView_Mobil.Size = new System.Drawing.Size(1216, 580);
+            this.dataGridView_Mobil.Size = new System.Drawing.Size(928, 580);
             this.dataGridView_Mobil.TabIndex = 26;
             this.dataGridView_Mobil.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Mobil_CellClick);
             // 
-            // pictureBox_Foto
+            // colIdMobil
             // 
-            this.pictureBox_Foto.BackColor = System.Drawing.Color.White;
-            this.pictureBox_Foto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox_Foto.Location = new System.Drawing.Point(15, 540);
-            this.pictureBox_Foto.Name = "pictureBox_Foto";
-            this.pictureBox_Foto.Size = new System.Drawing.Size(315, 180);
-            this.pictureBox_Foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_Foto.TabIndex = 27;
-            this.pictureBox_Foto.TabStop = false;
+            this.colIdMobil.HeaderText = "ID Mobil";
+            this.colIdMobil.MinimumWidth = 6;
+            this.colIdMobil.Name = "colIdMobil";
+            this.colIdMobil.ReadOnly = true;
+            this.colIdMobil.Width = 98;
+            // 
+            // colPlatNomor
+            // 
+            this.colPlatNomor.HeaderText = "Plat Nomor";
+            this.colPlatNomor.MinimumWidth = 6;
+            this.colPlatNomor.Name = "colPlatNomor";
+            this.colPlatNomor.ReadOnly = true;
+            this.colPlatNomor.Width = 118;
+            // 
+            // colMerk
+            // 
+            this.colMerk.HeaderText = "Merk";
+            this.colMerk.MinimumWidth = 6;
+            this.colMerk.Name = "colMerk";
+            this.colMerk.ReadOnly = true;
+            this.colMerk.Width = 74;
+            // 
+            // colTipe
+            // 
+            this.colTipe.HeaderText = "Tipe";
+            this.colTipe.MinimumWidth = 6;
+            this.colTipe.Name = "colTipe";
+            this.colTipe.ReadOnly = true;
+            this.colTipe.Width = 68;
+            // 
+            // colTahun
+            // 
+            this.colTahun.HeaderText = "Tahun";
+            this.colTahun.MinimumWidth = 6;
+            this.colTahun.Name = "colTahun";
+            this.colTahun.ReadOnly = true;
+            this.colTahun.Width = 81;
+            // 
+            // colWarna
+            // 
+            this.colWarna.HeaderText = "Warna";
+            this.colWarna.MinimumWidth = 6;
+            this.colWarna.Name = "colWarna";
+            this.colWarna.ReadOnly = true;
+            this.colWarna.Width = 87;
+            // 
+            // colHarga
+            // 
+            this.colHarga.HeaderText = "Harga Sewa Per Hari";
+            this.colHarga.MinimumWidth = 6;
+            this.colHarga.Name = "colHarga";
+            this.colHarga.ReadOnly = true;
+            this.colHarga.Width = 149;
+            // 
+            // colStatus
+            // 
+            this.colStatus.HeaderText = "Status";
+            this.colStatus.MinimumWidth = 6;
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
+            this.colStatus.Width = 83;
+            // 
+            // colFoto
+            // 
+            this.colFoto.HeaderText = "Foto";
+            this.colFoto.MinimumWidth = 6;
+            this.colFoto.Name = "colFoto";
+            this.colFoto.ReadOnly = true;
+            this.colFoto.Width = 70;
             // 
             // mastermobil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
-            this.ClientSize = new System.Drawing.Size(1602, 804);
-            this.Controls.Add(this.pictureBox_Foto);
+            this.ClientSize = new System.Drawing.Size(1319, 806);
             this.Controls.Add(this.dataGridView_Mobil);
             this.Controls.Add(this.button_Cari);
             this.Controls.Add(this.textBox_Cari);
@@ -447,8 +538,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Tahun)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Mobil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Foto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Mobil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -487,5 +578,14 @@
         private System.Windows.Forms.Button button_Cari;
         private System.Windows.Forms.DataGridView dataGridView_Mobil;
         private System.Windows.Forms.PictureBox pictureBox_Foto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIdMobil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPlatNomor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMerk;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTipe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTahun;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colWarna;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colHarga;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFoto;
     }
 }
