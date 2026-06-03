@@ -448,7 +448,7 @@
             this.colIdMobil.MinimumWidth = 6;
             this.colIdMobil.Name = "colIdMobil";
             this.colIdMobil.ReadOnly = true;
-            this.colIdMobil.Width = 98;
+            this.colIdMobil.Width = 91;
             // 
             // colPlatNomor
             // 
@@ -456,7 +456,7 @@
             this.colPlatNomor.MinimumWidth = 6;
             this.colPlatNomor.Name = "colPlatNomor";
             this.colPlatNomor.ReadOnly = true;
-            this.colPlatNomor.Width = 118;
+            this.colPlatNomor.Width = 109;
             // 
             // colMerk
             // 
