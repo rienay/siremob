@@ -57,12 +57,7 @@ namespace siremob.view
         {
             try
             {
-                if (string.IsNullOrWhiteSpace(tbx_IdMobil.Text) ||
-                    string.IsNullOrWhiteSpace(tbx_PlatNomor.Text) ||
-                    string.IsNullOrWhiteSpace(tbx_Merk.Text) ||
-                    string.IsNullOrWhiteSpace(tbx_Tipe.Text) ||
-                    string.IsNullOrWhiteSpace(tbx_Warna.Text) ||
-                    string.IsNullOrWhiteSpace(tbx_Harga.Text))
+                if (ApakahFormKosong())
                 {
                     MessageBox.Show("Semua field harus diisi!", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -70,35 +65,21 @@ namespace siremob.view
 
                 if (_service.CekIdMobil(tbx_IdMobil.Text))
                 {
-                    MessageBox.Show("ID Mobil sudah terdaftar!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("ID Mobil Sudah Terdaftar!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 if (_service.CekPlatNomor(tbx_PlatNomor.Text))
                 {
-                    MessageBox.Show("Plat Nomor sudah terdaftar!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    MessageBox.Show("Plat Nomor sudah terdaftar!", "Error", MessageBoxButtons.OK, MessageBox.Error);
                 }
 
-                model.mastermobil mm = new model.mastermobil();
-                mm.id_mobil = tbx_IdMobil.Text;
-                mm.platnomor = tbx_PlatNomor.Text;
-                mm.merk = tbx_Merk.Text;
-                mm.tipe = tbx_Tipe.Text;
-                mm.tahun = (int)nud_Tahun.Value;
-                mm.warna = tbx_Warna.Text;
-                mm.hargasewaperhari = decimal.Parse(tbx_Harga.Text);
-                mm.statusmobil = comboBox_Status.Text;
-                mm.foto = _fotoPath;
+                model.mastermobil mm = AmbilDataDariForm();
 
                 _service.TambahData(mm);
                 MessageBox.Show("Data berhasil ditambahkan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 BersihkanForm();
                 TampilkanData();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Gagal Menambah Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
