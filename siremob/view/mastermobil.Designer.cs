@@ -17,6 +17,7 @@
 
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -25,17 +26,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_PlatNomor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button_Batal = new System.Windows.Forms.Button();
             this.textBox_Merk = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button_Hapus = new System.Windows.Forms.Button();
             this.textBox_Tipe = new System.Windows.Forms.TextBox();
-            this.button_Ubah = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.button_Tambah = new System.Windows.Forms.Button();
             this.numericUpDown_Tahun = new System.Windows.Forms.NumericUpDown();
-            this.textBox_Foto = new System.Windows.Forms.TextBox();
-            this.button_Browse = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox_Warna = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -43,6 +38,12 @@
             this.textBox_Harga = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox_Status = new System.Windows.Forms.ComboBox();
+            this.button_Batal = new System.Windows.Forms.Button();
+            this.button_Hapus = new System.Windows.Forms.Button();
+            this.button_Ubah = new System.Windows.Forms.Button();
+            this.button_Tambah = new System.Windows.Forms.Button();
+            this.textBox_Foto = new System.Windows.Forms.TextBox();
+            this.button_Browse = new System.Windows.Forms.Button();
             this.pictureBox_Foto = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox_Cari = new System.Windows.Forms.TextBox();
@@ -161,19 +162,6 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Merk";
             // 
-            // button_Batal
-            // 
-            this.button_Batal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
-            this.button_Batal.Font = new System.Drawing.Font("Arial", 10F);
-            this.button_Batal.ForeColor = System.Drawing.Color.White;
-            this.button_Batal.Location = new System.Drawing.Point(671, 100);
-            this.button_Batal.Name = "button_Batal";
-            this.button_Batal.Size = new System.Drawing.Size(66, 40);
-            this.button_Batal.TabIndex = 22;
-            this.button_Batal.Text = "Batal";
-            this.button_Batal.UseVisualStyleBackColor = false;
-            this.button_Batal.Click += new System.EventHandler(this.button_Batal_Click);
-            // 
             // textBox_Merk
             // 
             this.textBox_Merk.Font = new System.Drawing.Font("Arial", 10F);
@@ -193,19 +181,6 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Tipe";
             // 
-            // button_Hapus
-            // 
-            this.button_Hapus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
-            this.button_Hapus.Font = new System.Drawing.Font("Arial", 10F);
-            this.button_Hapus.ForeColor = System.Drawing.Color.White;
-            this.button_Hapus.Location = new System.Drawing.Point(588, 100);
-            this.button_Hapus.Name = "button_Hapus";
-            this.button_Hapus.Size = new System.Drawing.Size(75, 40);
-            this.button_Hapus.TabIndex = 21;
-            this.button_Hapus.Text = "Hapus";
-            this.button_Hapus.UseVisualStyleBackColor = false;
-            this.button_Hapus.Click += new System.EventHandler(this.button_Hapus_Click);
-            // 
             // textBox_Tipe
             // 
             this.textBox_Tipe.Font = new System.Drawing.Font("Arial", 10F);
@@ -213,19 +188,6 @@
             this.textBox_Tipe.Name = "textBox_Tipe";
             this.textBox_Tipe.Size = new System.Drawing.Size(315, 27);
             this.textBox_Tipe.TabIndex = 7;
-            // 
-            // button_Ubah
-            // 
-            this.button_Ubah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
-            this.button_Ubah.Font = new System.Drawing.Font("Arial", 10F);
-            this.button_Ubah.ForeColor = System.Drawing.Color.White;
-            this.button_Ubah.Location = new System.Drawing.Point(505, 100);
-            this.button_Ubah.Name = "button_Ubah";
-            this.button_Ubah.Size = new System.Drawing.Size(75, 40);
-            this.button_Ubah.TabIndex = 20;
-            this.button_Ubah.Text = "Ubah";
-            this.button_Ubah.UseVisualStyleBackColor = false;
-            this.button_Ubah.Click += new System.EventHandler(this.button_Ubah_Click);
             // 
             // label6
             // 
@@ -237,19 +199,6 @@
             this.label6.Size = new System.Drawing.Size(52, 19);
             this.label6.TabIndex = 8;
             this.label6.Text = "Tahun";
-            // 
-            // button_Tambah
-            // 
-            this.button_Tambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
-            this.button_Tambah.Font = new System.Drawing.Font("Arial", 10F);
-            this.button_Tambah.ForeColor = System.Drawing.Color.White;
-            this.button_Tambah.Location = new System.Drawing.Point(422, 100);
-            this.button_Tambah.Name = "button_Tambah";
-            this.button_Tambah.Size = new System.Drawing.Size(75, 40);
-            this.button_Tambah.TabIndex = 19;
-            this.button_Tambah.Text = "Tambah";
-            this.button_Tambah.UseVisualStyleBackColor = false;
-            this.button_Tambah.Click += new System.EventHandler(this.button_Tambah_Click);
             // 
             // numericUpDown_Tahun
             // 
@@ -273,28 +222,6 @@
             0,
             0,
             0});
-            // 
-            // textBox_Foto
-            // 
-            this.textBox_Foto.Font = new System.Drawing.Font("Arial", 10F);
-            this.textBox_Foto.Location = new System.Drawing.Point(893, 97);
-            this.textBox_Foto.Name = "textBox_Foto";
-            this.textBox_Foto.ReadOnly = true;
-            this.textBox_Foto.Size = new System.Drawing.Size(92, 27);
-            this.textBox_Foto.TabIndex = 17;
-            // 
-            // button_Browse
-            // 
-            this.button_Browse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
-            this.button_Browse.Font = new System.Drawing.Font("Arial", 9F);
-            this.button_Browse.ForeColor = System.Drawing.Color.White;
-            this.button_Browse.Location = new System.Drawing.Point(795, 92);
-            this.button_Browse.Name = "button_Browse";
-            this.button_Browse.Size = new System.Drawing.Size(92, 60);
-            this.button_Browse.TabIndex = 18;
-            this.button_Browse.Text = "Browse";
-            this.button_Browse.UseVisualStyleBackColor = false;
-            this.button_Browse.Click += new System.EventHandler(this.button_Browse_Click);
             // 
             // label7
             // 
@@ -369,6 +296,80 @@
             this.comboBox_Status.TabIndex = 15;
             this.comboBox_Status.Text = "Tersedia";
             // 
+            // button_Batal
+            // 
+            this.button_Batal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
+            this.button_Batal.Font = new System.Drawing.Font("Arial", 10F);
+            this.button_Batal.ForeColor = System.Drawing.Color.White;
+            this.button_Batal.Location = new System.Drawing.Point(671, 100);
+            this.button_Batal.Name = "button_Batal";
+            this.button_Batal.Size = new System.Drawing.Size(66, 40);
+            this.button_Batal.TabIndex = 22;
+            this.button_Batal.Text = "Batal";
+            this.button_Batal.UseVisualStyleBackColor = false;
+            this.button_Batal.Click += new System.EventHandler(this.button_Batal_Click);
+            // 
+            // button_Hapus
+            // 
+            this.button_Hapus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
+            this.button_Hapus.Font = new System.Drawing.Font("Arial", 10F);
+            this.button_Hapus.ForeColor = System.Drawing.Color.White;
+            this.button_Hapus.Location = new System.Drawing.Point(588, 100);
+            this.button_Hapus.Name = "button_Hapus";
+            this.button_Hapus.Size = new System.Drawing.Size(75, 40);
+            this.button_Hapus.TabIndex = 21;
+            this.button_Hapus.Text = "Hapus";
+            this.button_Hapus.UseVisualStyleBackColor = false;
+            this.button_Hapus.Click += new System.EventHandler(this.button_Hapus_Click);
+            // 
+            // button_Ubah
+            // 
+            this.button_Ubah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
+            this.button_Ubah.Font = new System.Drawing.Font("Arial", 10F);
+            this.button_Ubah.ForeColor = System.Drawing.Color.White;
+            this.button_Ubah.Location = new System.Drawing.Point(505, 100);
+            this.button_Ubah.Name = "button_Ubah";
+            this.button_Ubah.Size = new System.Drawing.Size(75, 40);
+            this.button_Ubah.TabIndex = 20;
+            this.button_Ubah.Text = "Ubah";
+            this.button_Ubah.UseVisualStyleBackColor = false;
+            this.button_Ubah.Click += new System.EventHandler(this.button_Ubah_Click);
+            // 
+            // button_Tambah
+            // 
+            this.button_Tambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
+            this.button_Tambah.Font = new System.Drawing.Font("Arial", 10F);
+            this.button_Tambah.ForeColor = System.Drawing.Color.White;
+            this.button_Tambah.Location = new System.Drawing.Point(422, 100);
+            this.button_Tambah.Name = "button_Tambah";
+            this.button_Tambah.Size = new System.Drawing.Size(75, 40);
+            this.button_Tambah.TabIndex = 19;
+            this.button_Tambah.Text = "Tambah";
+            this.button_Tambah.UseVisualStyleBackColor = false;
+            this.button_Tambah.Click += new System.EventHandler(this.button_Tambah_Click);
+            // 
+            // textBox_Foto
+            // 
+            this.textBox_Foto.Font = new System.Drawing.Font("Arial", 10F);
+            this.textBox_Foto.Location = new System.Drawing.Point(893, 97);
+            this.textBox_Foto.Name = "textBox_Foto";
+            this.textBox_Foto.ReadOnly = true;
+            this.textBox_Foto.Size = new System.Drawing.Size(92, 27);
+            this.textBox_Foto.TabIndex = 17;
+            // 
+            // button_Browse
+            // 
+            this.button_Browse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
+            this.button_Browse.Font = new System.Drawing.Font("Arial", 9F);
+            this.button_Browse.ForeColor = System.Drawing.Color.White;
+            this.button_Browse.Location = new System.Drawing.Point(795, 92);
+            this.button_Browse.Name = "button_Browse";
+            this.button_Browse.Size = new System.Drawing.Size(92, 60);
+            this.button_Browse.TabIndex = 18;
+            this.button_Browse.Text = "Browse";
+            this.button_Browse.UseVisualStyleBackColor = false;
+            this.button_Browse.Click += new System.EventHandler(this.button_Browse_Click);
+            // 
             // pictureBox_Foto
             // 
             this.pictureBox_Foto.BackColor = System.Drawing.Color.White;
@@ -415,7 +416,9 @@
             // 
             // dataGridView_Mobil
             // 
-            this.dataGridView_Mobil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dataGridView_Mobil.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_Mobil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_Mobil.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_Mobil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Mobil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -441,7 +444,6 @@
             this.colIdMobil.MinimumWidth = 6;
             this.colIdMobil.Name = "colIdMobil";
             this.colIdMobil.ReadOnly = true;
-            this.colIdMobil.Width = 91;
             // 
             // colPlatNomor
             // 
@@ -449,7 +451,6 @@
             this.colPlatNomor.MinimumWidth = 6;
             this.colPlatNomor.Name = "colPlatNomor";
             this.colPlatNomor.ReadOnly = true;
-            this.colPlatNomor.Width = 109;
             // 
             // colMerk
             // 
@@ -457,7 +458,6 @@
             this.colMerk.MinimumWidth = 6;
             this.colMerk.Name = "colMerk";
             this.colMerk.ReadOnly = true;
-            this.colMerk.Width = 74;
             // 
             // colTipe
             // 
@@ -465,7 +465,6 @@
             this.colTipe.MinimumWidth = 6;
             this.colTipe.Name = "colTipe";
             this.colTipe.ReadOnly = true;
-            this.colTipe.Width = 68;
             // 
             // colTahun
             // 
@@ -473,7 +472,6 @@
             this.colTahun.MinimumWidth = 6;
             this.colTahun.Name = "colTahun";
             this.colTahun.ReadOnly = true;
-            this.colTahun.Width = 81;
             // 
             // colWarna
             // 
@@ -481,7 +479,6 @@
             this.colWarna.MinimumWidth = 6;
             this.colWarna.Name = "colWarna";
             this.colWarna.ReadOnly = true;
-            this.colWarna.Width = 87;
             // 
             // colHarga
             // 
@@ -489,7 +486,6 @@
             this.colHarga.MinimumWidth = 6;
             this.colHarga.Name = "colHarga";
             this.colHarga.ReadOnly = true;
-            this.colHarga.Width = 149;
             // 
             // colStatus
             // 
@@ -497,7 +493,6 @@
             this.colStatus.MinimumWidth = 6;
             this.colStatus.Name = "colStatus";
             this.colStatus.ReadOnly = true;
-            this.colStatus.Width = 83;
             // 
             // mastermobil
             // 
