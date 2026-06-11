@@ -31,6 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cmb_jaminan = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.txt_denda_kerusakan = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.cmb_kondisimobil = new System.Windows.Forms.ComboBox();
@@ -51,7 +53,7 @@
             this.txt_merk = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.cmb_idrental = new System.Windows.Forms.ComboBox();
-            this.cmb_ststus_pengembalian = new System.Windows.Forms.ComboBox();
+            this.cmb_ststus_pembayaran = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_total_bayar = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -75,8 +77,6 @@
             this.btn_cari = new System.Windows.Forms.Button();
             this.txt_cari = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.cmb_jaminan = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -128,7 +128,7 @@
             this.panel2.Controls.Add(this.txt_merk);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.cmb_idrental);
-            this.panel2.Controls.Add(this.cmb_ststus_pengembalian);
+            this.panel2.Controls.Add(this.cmb_ststus_pembayaran);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.txt_total_bayar);
             this.panel2.Controls.Add(this.label10);
@@ -143,6 +143,25 @@
             this.panel2.Size = new System.Drawing.Size(605, 1080);
             this.panel2.TabIndex = 2;
             // 
+            // cmb_jaminan
+            // 
+            this.cmb_jaminan.FormattingEnabled = true;
+            this.cmb_jaminan.Location = new System.Drawing.Point(257, 331);
+            this.cmb_jaminan.Name = "cmb_jaminan";
+            this.cmb_jaminan.Size = new System.Drawing.Size(299, 28);
+            this.cmb_jaminan.TabIndex = 37;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(32, 334);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(87, 25);
+            this.label17.TabIndex = 36;
+            this.label17.Text = "Jaminan";
+            // 
             // txt_denda_kerusakan
             // 
             this.txt_denda_kerusakan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,6 +169,7 @@
             this.txt_denda_kerusakan.Name = "txt_denda_kerusakan";
             this.txt_denda_kerusakan.Size = new System.Drawing.Size(299, 30);
             this.txt_denda_kerusakan.TabIndex = 34;
+            this.txt_denda_kerusakan.TextChanged += new System.EventHandler(this.txt_denda_kerusakan_TextChanged);
             // 
             // label16
             // 
@@ -169,6 +189,7 @@
             this.cmb_kondisimobil.Name = "cmb_kondisimobil";
             this.cmb_kondisimobil.Size = new System.Drawing.Size(299, 28);
             this.cmb_kondisimobil.TabIndex = 33;
+            this.cmb_kondisimobil.SelectedIndexChanged += new System.EventHandler(this.cmb_kondisimobil_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -306,6 +327,7 @@
             this.dtp_tgl_kembaliaktual.Name = "dtp_tgl_kembaliaktual";
             this.dtp_tgl_kembaliaktual.Size = new System.Drawing.Size(299, 26);
             this.dtp_tgl_kembaliaktual.TabIndex = 13;
+            this.dtp_tgl_kembaliaktual.ValueChanged += new System.EventHandler(this.dtp_tgl_kembaliaktual_ValueChanged);
             // 
             // label9
             // 
@@ -345,14 +367,16 @@
             this.cmb_idrental.Name = "cmb_idrental";
             this.cmb_idrental.Size = new System.Drawing.Size(299, 28);
             this.cmb_idrental.TabIndex = 23;
+            this.cmb_idrental.SelectedIndexChanged += new System.EventHandler(this.cmb_idrental_SelectedIndexChanged);
             // 
-            // cmb_ststus_pengembalian
+            // cmb_ststus_pembayaran
             // 
-            this.cmb_ststus_pengembalian.FormattingEnabled = true;
-            this.cmb_ststus_pengembalian.Location = new System.Drawing.Point(256, 745);
-            this.cmb_ststus_pengembalian.Name = "cmb_ststus_pengembalian";
-            this.cmb_ststus_pengembalian.Size = new System.Drawing.Size(299, 28);
-            this.cmb_ststus_pengembalian.TabIndex = 22;
+            this.cmb_ststus_pembayaran.FormattingEnabled = true;
+            this.cmb_ststus_pembayaran.Location = new System.Drawing.Point(256, 745);
+            this.cmb_ststus_pembayaran.Name = "cmb_ststus_pembayaran";
+            this.cmb_ststus_pembayaran.Size = new System.Drawing.Size(299, 28);
+            this.cmb_ststus_pembayaran.TabIndex = 22;
+            this.cmb_ststus_pembayaran.SelectedIndexChanged += new System.EventHandler(this.cmb_ststus_pengembalian_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -574,25 +598,6 @@
             this.label11.TabIndex = 20;
             this.label11.Text = "Cari:";
             // 
-            // cmb_jaminan
-            // 
-            this.cmb_jaminan.FormattingEnabled = true;
-            this.cmb_jaminan.Location = new System.Drawing.Point(257, 331);
-            this.cmb_jaminan.Name = "cmb_jaminan";
-            this.cmb_jaminan.Size = new System.Drawing.Size(299, 28);
-            this.cmb_jaminan.TabIndex = 37;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(32, 334);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(87, 25);
-            this.label17.TabIndex = 36;
-            this.label17.Text = "Jaminan";
-            // 
             // pengembalian_pembayaran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -642,7 +647,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dgv_pengembalian;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cmb_ststus_pengembalian;
+        private System.Windows.Forms.ComboBox cmb_ststus_pembayaran;
         private System.Windows.Forms.TextBox txt_platnomor;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmb_idrental;
