@@ -21,7 +21,7 @@ namespace siremob.view
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelFilter = new System.Windows.Forms.Panel();
             this.btnReset = new System.Windows.Forms.Button();
-            this.btnTerapkan = new System.Windows.Forms.Button();
+            this.btnFilter = new System.Windows.Forms.Button();
             this.dtpSampai = new System.Windows.Forms.DateTimePicker();
             this.lblSampai = new System.Windows.Forms.Label();
             this.dtpDari = new System.Windows.Forms.DateTimePicker();
@@ -84,7 +84,7 @@ namespace siremob.view
             this.panelFilter.BackColor = System.Drawing.Color.White;
             this.panelFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelFilter.Controls.Add(this.btnReset);
-            this.panelFilter.Controls.Add(this.btnTerapkan);
+            this.panelFilter.Controls.Add(this.btnFilter);
             this.panelFilter.Controls.Add(this.dtpSampai);
             this.panelFilter.Controls.Add(this.lblSampai);
             this.panelFilter.Controls.Add(this.dtpDari);
@@ -111,21 +111,21 @@ namespace siremob.view
             this.btnReset.Text = "Reset Filter";
             this.btnReset.UseVisualStyleBackColor = false;
             // 
-            // btnTerapkan
+            // btnFilter
             // 
-            this.btnTerapkan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
-            this.btnTerapkan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTerapkan.FlatAppearance.BorderSize = 0;
-            this.btnTerapkan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTerapkan.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTerapkan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.btnTerapkan.Location = new System.Drawing.Point(951, 15);
-            this.btnTerapkan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTerapkan.Name = "btnTerapkan";
-            this.btnTerapkan.Size = new System.Drawing.Size(135, 50);
-            this.btnTerapkan.TabIndex = 4;
-            this.btnTerapkan.Text = "Terapkan";
-            this.btnTerapkan.UseVisualStyleBackColor = false;
+            this.btnFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(205)))), ((int)(((byte)(170)))));
+            this.btnFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFilter.FlatAppearance.BorderSize = 0;
+            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFilter.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.btnFilter.Location = new System.Drawing.Point(951, 15);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(135, 50);
+            this.btnFilter.TabIndex = 4;
+            this.btnFilter.Text = "Terapkan";
+            this.btnFilter.UseVisualStyleBackColor = false;
             // 
             // dtpSampai
             // 
@@ -435,7 +435,7 @@ namespace siremob.view
         private System.Windows.Forms.Label lblSampai;
         private System.Windows.Forms.DateTimePicker dtpDari;
         private System.Windows.Forms.Label lblDari;
-        private System.Windows.Forms.Button btnTerapkan;
+        private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.DataGridView dgvLaporan;
         private System.Windows.Forms.Panel cardRentalPanel;
