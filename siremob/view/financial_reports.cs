@@ -39,6 +39,13 @@ namespace siremob.view
         // keterlambatan & kerusakan (dari tabel pengembalian).
         private void AturAksesBerdasarkanRole()
         {
+            if (Session.Role == "Karyawan")
+            {
+                MessageBox.Show("Karyawan tidak memiliki akses untuk melihat laporan keuangan!", "Akses Ditolak", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.BeginInvoke((MethodInvoker)(() => this.Close()));
+                return;
+            }
+
             bool isOwner = Session.Role == "Owner";
 
             cardDendaKeterlambatanPanel.Visible = isOwner;

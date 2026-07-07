@@ -249,5 +249,10 @@ namespace siremob.view
                 MessageBox.Show("Gagal mencari transaksi: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -69,9 +69,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(931, 52);
+            this.panel1.Size = new System.Drawing.Size(1204, 52);
             this.panel1.TabIndex = 1;
             // 
             // lblModeAkses
@@ -104,8 +104,8 @@
             // dtp_tgl_sewa
             // 
             this.dtp_tgl_sewa.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_tgl_sewa.Location = new System.Drawing.Point(10, 88);
-            this.dtp_tgl_sewa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtp_tgl_sewa.Location = new System.Drawing.Point(122, 101);
+            this.dtp_tgl_sewa.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_tgl_sewa.Name = "dtp_tgl_sewa";
             this.dtp_tgl_sewa.Size = new System.Drawing.Size(211, 20);
             this.dtp_tgl_sewa.TabIndex = 28;
@@ -117,7 +117,7 @@
             this.btn_simpan.Font = new System.Drawing.Font("Arial", 10F);
             this.btn_simpan.ForeColor = System.Drawing.Color.White;
             this.btn_simpan.Location = new System.Drawing.Point(12, 428);
-            this.btn_simpan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_simpan.Margin = new System.Windows.Forms.Padding(2);
             this.btn_simpan.Name = "btn_simpan";
             this.btn_simpan.Size = new System.Drawing.Size(101, 26);
             this.btn_simpan.TabIndex = 19;
@@ -130,7 +130,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 10F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(10, 107);
+            this.label5.Location = new System.Drawing.Point(7, 133);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 16);
@@ -142,7 +142,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 10F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(10, 75);
+            this.label4.Location = new System.Drawing.Point(7, 105);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 16);
@@ -154,7 +154,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 10F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(10, 44);
+            this.label3.Location = new System.Drawing.Point(9, 77);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 16);
@@ -166,7 +166,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 10F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(10, 13);
+            this.label2.Location = new System.Drawing.Point(7, 47);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 16);
@@ -176,8 +176,8 @@
             // cmb_mobil
             // 
             this.cmb_mobil.FormattingEnabled = true;
-            this.cmb_mobil.Location = new System.Drawing.Point(10, 55);
-            this.cmb_mobil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_mobil.Location = new System.Drawing.Point(122, 76);
+            this.cmb_mobil.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_mobil.Name = "cmb_mobil";
             this.cmb_mobil.Size = new System.Drawing.Size(211, 21);
             this.cmb_mobil.TabIndex = 29;
@@ -202,9 +202,9 @@
             this.panel2.Controls.Add(this.txt_total);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 52);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(233, 549);
+            this.panel2.Size = new System.Drawing.Size(397, 607);
             this.panel2.TabIndex = 2;
             // 
             // btn_batal
@@ -213,7 +213,7 @@
             this.btn_batal.Font = new System.Drawing.Font("Arial", 10F);
             this.btn_batal.ForeColor = System.Drawing.Color.White;
             this.btn_batal.Location = new System.Drawing.Point(117, 428);
-            this.btn_batal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_batal.Margin = new System.Windows.Forms.Padding(2);
             this.btn_batal.Name = "btn_batal";
             this.btn_batal.Size = new System.Drawing.Size(101, 26);
             this.btn_batal.TabIndex = 36;
@@ -226,7 +226,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 10F);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(10, 168);
+            this.label7.Location = new System.Drawing.Point(7, 209);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 16);
@@ -238,7 +238,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 10F);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(10, 136);
+            this.label6.Location = new System.Drawing.Point(7, 168);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 16);
@@ -248,8 +248,8 @@
             // txt_lama_sewa
             // 
             this.txt_lama_sewa.Font = new System.Drawing.Font("Arial", 10F);
-            this.txt_lama_sewa.Location = new System.Drawing.Point(10, 146);
-            this.txt_lama_sewa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_lama_sewa.Location = new System.Drawing.Point(122, 165);
+            this.txt_lama_sewa.Margin = new System.Windows.Forms.Padding(2);
             this.txt_lama_sewa.Name = "txt_lama_sewa";
             this.txt_lama_sewa.Size = new System.Drawing.Size(211, 23);
             this.txt_lama_sewa.TabIndex = 32;
@@ -257,8 +257,8 @@
             // cmb_pelanggan
             // 
             this.cmb_pelanggan.FormattingEnabled = true;
-            this.cmb_pelanggan.Location = new System.Drawing.Point(10, 24);
-            this.cmb_pelanggan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_pelanggan.Location = new System.Drawing.Point(122, 46);
+            this.cmb_pelanggan.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_pelanggan.Name = "cmb_pelanggan";
             this.cmb_pelanggan.Size = new System.Drawing.Size(211, 21);
             this.cmb_pelanggan.TabIndex = 30;
@@ -266,8 +266,8 @@
             // dtp_tgl_kembali
             // 
             this.dtp_tgl_kembali.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_tgl_kembali.Location = new System.Drawing.Point(10, 118);
-            this.dtp_tgl_kembali.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtp_tgl_kembali.Location = new System.Drawing.Point(122, 129);
+            this.dtp_tgl_kembali.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_tgl_kembali.Name = "dtp_tgl_kembali";
             this.dtp_tgl_kembali.Size = new System.Drawing.Size(211, 20);
             this.dtp_tgl_kembali.TabIndex = 31;
@@ -276,8 +276,8 @@
             // txt_total
             // 
             this.txt_total.Font = new System.Drawing.Font("Arial", 10F);
-            this.txt_total.Location = new System.Drawing.Point(10, 176);
-            this.txt_total.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_total.Location = new System.Drawing.Point(122, 206);
+            this.txt_total.Margin = new System.Windows.Forms.Padding(2);
             this.txt_total.Name = "txt_total";
             this.txt_total.Size = new System.Drawing.Size(211, 23);
             this.txt_total.TabIndex = 35;
@@ -295,12 +295,12 @@
             this.colTahun,
             this.colWarna,
             this.colHarga});
-            this.dgv_transaksi.Location = new System.Drawing.Point(253, 96);
-            this.dgv_transaksi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_transaksi.Location = new System.Drawing.Point(442, 116);
+            this.dgv_transaksi.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_transaksi.Name = "dgv_transaksi";
             this.dgv_transaksi.ReadOnly = true;
             this.dgv_transaksi.RowHeadersWidth = 51;
-            this.dgv_transaksi.Size = new System.Drawing.Size(619, 410);
+            this.dgv_transaksi.Size = new System.Drawing.Size(702, 462);
             this.dgv_transaksi.TabIndex = 27;
             // 
             // colIdMobil
@@ -364,20 +364,21 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 10F);
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(265, 65);
+            this.label11.Location = new System.Drawing.Point(401, 68);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(37, 16);
             this.label11.TabIndex = 28;
             this.label11.Text = "Cari:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // txb_cari
             // 
             this.txb_cari.Font = new System.Drawing.Font("Arial", 10F);
-            this.txb_cari.Location = new System.Drawing.Point(304, 63);
-            this.txb_cari.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txb_cari.Location = new System.Drawing.Point(442, 64);
+            this.txb_cari.Margin = new System.Windows.Forms.Padding(2);
             this.txb_cari.Name = "txb_cari";
-            this.txb_cari.Size = new System.Drawing.Size(235, 23);
+            this.txb_cari.Size = new System.Drawing.Size(361, 23);
             this.txb_cari.TabIndex = 29;
             // 
             // btn_cari
@@ -385,8 +386,8 @@
             this.btn_cari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(143)))), ((int)(((byte)(174)))));
             this.btn_cari.Font = new System.Drawing.Font("Arial", 10F);
             this.btn_cari.ForeColor = System.Drawing.Color.White;
-            this.btn_cari.Location = new System.Drawing.Point(550, 61);
-            this.btn_cari.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_cari.Location = new System.Drawing.Point(807, 65);
+            this.btn_cari.Margin = new System.Windows.Forms.Padding(2);
             this.btn_cari.Name = "btn_cari";
             this.btn_cari.Size = new System.Drawing.Size(50, 22);
             this.btn_cari.TabIndex = 30;
@@ -398,14 +399,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.ClientSize = new System.Drawing.Size(931, 601);
+            this.ClientSize = new System.Drawing.Size(1204, 659);
             this.Controls.Add(this.btn_cari);
             this.Controls.Add(this.txb_cari);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dgv_transaksi);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "transaksirental";
             this.Text = "rental";
             this.Load += new System.EventHandler(this.rental_Load);
