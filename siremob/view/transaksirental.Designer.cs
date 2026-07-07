@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblModeAkses = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtp_tgl_sewa = new System.Windows.Forms.DateTimePicker();
             this.btn_simpan = new System.Windows.Forms.Button();
@@ -64,12 +65,27 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.lblModeAkses);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1320, 80);
             this.panel1.TabIndex = 1;
+            // 
+            // lblModeAkses
+            // 
+            this.lblModeAkses.AutoSize = true;
+            this.lblModeAkses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.lblModeAkses.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModeAkses.ForeColor = System.Drawing.Color.White;
+            this.lblModeAkses.Location = new System.Drawing.Point(1080, 30);
+            this.lblModeAkses.Name = "lblModeAkses";
+            this.lblModeAkses.Padding = new System.Windows.Forms.Padding(8, 4, 8, 4);
+            this.lblModeAkses.Size = new System.Drawing.Size(60, 26);
+            this.lblModeAkses.TabIndex = 99;
+            this.lblModeAkses.Text = "Mode: Monitoring (Read Only)";
+            this.lblModeAkses.Visible = false;
             // 
             // label1
             // 
@@ -384,6 +400,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblModeAkses;
         private System.Windows.Forms.DateTimePicker dtp_tgl_sewa;
         private System.Windows.Forms.Button btn_simpan;
         private System.Windows.Forms.Label label5;
