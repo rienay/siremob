@@ -1,6 +1,17 @@
-﻿namespace siremob.view
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace siremob.view
 {
-    partial class transaksirental
+    // Mengubah nama class menjadi transaksirental_view agar sinkron dengan file utama
+    partial class transaksirental_view
     {
         /// <summary>
         /// Required designer variable.

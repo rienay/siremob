@@ -11,7 +11,6 @@ namespace siremob.service
 {
     internal class transaksirental_serve
     {
-        // Instansiasi objek kelas Koneksi Anda
         private Koneksi koneksiDb = new Koneksi();
 
         // 1. MENGAMBIL DATA PELANGGAN UNTUK COMBOBOX
@@ -24,37 +23,46 @@ namespace siremob.service
         // 2. MENGAMBIL DATA MOBIL YANG TERSEDIA UNTUK COMBOBOX
         public DataTable AmbilMobilTersedia()
         {
-            // Menarik id, merk, dan harga sewa untuk keperluan kalkulasi di Form
             string query = "SELECT id_mobil, merk, harga_sewa FROM mobil WHERE status = 'Tersedia'";
             return koneksiDb.EksekusiQuery(query);
         }
 
-        // 3. MENGAMBIL DATA UNTUK DATAGRIDVIEW (QUERY JOIN)
+        // 3. MENGAMBIL DATA UNTUK DATAGRIDVIEW
         public DataTable TampilkanDaftarRental()
         {
-            // Sesuaikan nama 'id_rental_tabel' dengan nama asli tabel sewa Anda di database
+            // Catatan: Ubah 'transaksirental' di bawah jika nama tabel sewa Anda di database berbeda
             string query = @"SELECT r.id_rental, p.nama_pelanggan, m.merk AS Mobil, 
                                     r.tanggalsewa, r.tangkalkembali_rencana, 
                                     r.totalbiaya_estimasi, r.statusrental 
-                             FROM id_rental_tabel r
+                             FROM transaksirental r
                              INNER JOIN pelanggan p ON r.id_pelanggan = p.id_pelanggan
                              INNER JOIN mobil m ON r.id_mobil = m.id_mobil";
 
             return koneksiDb.EksekusiQuery(query);
         }
 
-        // 4. MENYIMPAN TRANSAKSI BARU & UPDATE STATUS MOBIL
-        // Menggunakan objek model 'transaksirental' sebagai parameter tunggal
-        public bool SimpanTransaksiSewaDenganModel(transaksirental objekSewa)
+        // 4. FUNGSI YANG DICARI OLEH ERROR CS1061
+        public bool SimpanTransaksiSewa(string idRental, string idMobil, string idPelanggan, DateTime tglSewa, DateTime tglKembali, decimal totalBiaya)
         {
-            string sSewa = objekSewa.TanggalSewa.ToString("yyyy-MM-dd");
-            string sKembali = objekSewa.TanggalKembaliRencana.ToString("yyyy-MM-dd");
+            // Format tanggal agar sesuai dengan MySQL (YYYY-MM-DD)
+            string sSewa = tglSewa.ToString("yyyy-MM-dd");
+            string sKembali = tglKembali.ToString("yyyy-MM-dd");
 
-            string queryInsert = $@"INSERT INTO id_rental_tabel 
-                           VALUES ('{objekSewa.IdRental}', '{objekSewa.IdMobil}', '{objekSewa.IdPelanggan}', 
-                                   '{sSewa}', '{sKembali}', '{objekSewa.Jaminan}', {objekSewa.TotalBiayaEstimasi}, '{objekSewa.StatusRental}')";
+            // Query A: Insert data rental baru
+            // Sesuai tabel di database Anda, urutan kolom: id_rental, id_mobil, id_pelanggan, tanggalsewa, tangkalkembali_rencana, jaminan, totalbiaya_estimasi, statusrental
+            string queryInsert = $@"INSERT INTO transaksirental 
+                                   (id_rental, id_mobil, id_pelanggan, tanggalsewa, tangkalkembali_rencana, jaminan, totalbiaya_estimasi, statusrental) 
+                                   VALUES ('{idRental}', '{idMobil}', '{idPelanggan}', '{sSewa}', '{sKembali}', '-', {totalBiaya}, 'Berjalan')";
 
-            return koneksiDb.EksekusiNonQuery(queryInsert) > 0;
+            // Query B: Update status mobil menjadi 'Disewa'
+            string queryUpdateMobil = $"UPDATE mobil SET status = 'Disewa' WHERE id_mobil = '{idMobil}'";
+
+            // Eksekusi kedua perintah ke kelas Koneksi Anda
+            int hasilInsert = koneksiDb.EksekusiNonQuery(queryInsert);
+            int hasilUpdate = koneksiDb.EksekusiNonQuery(queryUpdateMobil);
+
+            // Mengembalikan true jika kedua query berhasil dieksekusi
+            return (hasilInsert > 0 && hasilUpdate > 0);
         }
     }
 }
