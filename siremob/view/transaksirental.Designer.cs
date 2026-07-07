@@ -211,9 +211,10 @@ namespace siremob.view
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(15, 258);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 23);
+            this.label7.Size = new System.Drawing.Size(115, 23);
             this.label7.TabIndex = 34;
-            this.label7.Text = "Total Biaya";
+            this.label7.Text = "Total biyaas";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -366,7 +367,7 @@ namespace siremob.view
             this.btn_cari.Text = "Cari";
             this.btn_cari.UseVisualStyleBackColor = false;
             // 
-            // transaksirental
+            // transaksirental_view
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -378,7 +379,7 @@ namespace siremob.view
             this.Controls.Add(this.dgv_transaksi);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "transaksirental";
+            this.Name = "transaksirental_view";
             this.Text = "rental";
             this.Load += new System.EventHandler(this.rental_Load);
             this.panel1.ResumeLayout(false);
