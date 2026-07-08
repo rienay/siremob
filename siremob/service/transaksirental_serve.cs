@@ -37,14 +37,14 @@ namespace siremob.service
             return "R01";
         }
 
-        // 1. MENGAMBIL DATA PELANGGAN UNTUK COMBOBOX
+        // 1. MENGAMBIL DATA PELANGGAN
         public DataTable AmbilSemuaPelanggan()
         {
             string query = "SELECT id_pelanggan, nama AS nama_pelanggan FROM pelanggan";
             return koneksiDb.EksekusiQuery(query);
         }
 
-        // 2. MENGAMBIL DATA MOBIL YANG TERSEDIA UNTUK COMBOBOX
+        // 2. MENGAMBIL DATA MOBIL YANG TERSEDIA UNTUK 
         public DataTable AmMobilTersedia()
         {
             string query = "SELECT id_mobil, merk, hargasewaperhari AS harga_sewa FROM mobil WHERE statusmobil = 'Tersedia'";
